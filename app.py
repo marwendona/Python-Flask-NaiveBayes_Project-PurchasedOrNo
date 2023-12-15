@@ -19,7 +19,9 @@ def handle_generate_prediction():
         age = float(request.json['age'])
         salary = float(request.json['salary'])
         prediction = generate_prediction(age, salary)
-        prediction_data.append({'age': age, 'salary': salary, 'prediction': prediction})
+        pred = 'purchased' if prediction == 1 else 'Not purchased'
+
+        prediction_data.append({'age': age, 'salary': salary, 'prediction': pred})
 
         # Include prediction in JSON response along with redirect
         return jsonify({'prediction': prediction})
@@ -43,7 +45,7 @@ def login():
     password = request.form.get('password')
 
     # Vérifiez les informations d'identification (remplacez cela par une vérification sécurisée en production)
-    if username == 'username' and password == 'password':
+    if username == 'admin' and password == 'admin':
         return redirect(url_for('home'))
     
     else:
