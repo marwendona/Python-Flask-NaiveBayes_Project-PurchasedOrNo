@@ -17,4 +17,4 @@ To run this project, follow these steps:
 Default login credentials:
 
 * Username: 'admin'
-* Password: 'admin'
+* Password: 'admin' 

@@ -37,7 +37,7 @@ def show_data():
     prediction = jsonify(prediction_json)
 
     return render_template('show_data.html', prediction_data=prediction_data, prediction=prediction)
-
+ 
 @app.route('/login', methods=['POST'])
 def login():
     # Récupérez les données du formulaire
